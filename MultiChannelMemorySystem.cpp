@@ -438,12 +438,14 @@ bool MultiChannelMemorySystem::addTransaction(const Transaction &trans)
 bool MultiChannelMemorySystem::addTransaction(Transaction *trans)
 {
 	unsigned channelNumber = findChannelNumber(trans->address); 
+/* printf("channel number for mem transaction : %u\n", channelNumber); */
 	return channels[channelNumber]->addTransaction(trans); 
 }
 
 bool MultiChannelMemorySystem::addTransaction(bool isWrite, uint64_t addr)
 {
 	unsigned channelNumber = findChannelNumber(addr); 
+/* printf("channel number for mem transaction : %u\n", channelNumber); */
 	return channels[channelNumber]->addTransaction(isWrite, addr); 
 }
 
