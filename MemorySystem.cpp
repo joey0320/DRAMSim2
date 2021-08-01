@@ -62,7 +62,7 @@ MemorySystem::MemorySystem(unsigned id, unsigned int megsOfMemory, CSVWriter &cs
 {
 	currentClockCycle = 0;
 
-	DEBUG("===== MemorySystem "<<systemID<<" =====");
+/* DEBUG("===== MemorySystem "<<systemID<<" ====="); */
 
 
 	//calculate the total storage based on the devices the user selected and the number of
@@ -127,7 +127,7 @@ MemorySystem::MemorySystem(unsigned id, unsigned int megsOfMemory, CSVWriter &cs
 	NUM_DEVICES = JEDEC_DATA_BUS_BITS/DEVICE_WIDTH;
 	TOTAL_STORAGE = (NUM_RANKS * megsOfStoragePerRank); 
 
-	DEBUG("CH. " <<systemID<<" TOTAL_STORAGE : "<< TOTAL_STORAGE << "MB | "<<NUM_RANKS<<" Ranks | "<< NUM_DEVICES <<" Devices per rank");
+/* DEBUG("CH. " <<systemID<<" TOTAL_STORAGE : "<< TOTAL_STORAGE << "MB | "<<NUM_RANKS<<" Ranks | "<< NUM_DEVICES <<" Devices per rank"); */
 
 
 	memoryController = new MemoryController(this, csvOut, dramsim_log);
